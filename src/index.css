@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@200;300;400;500;600&family=Montserrat:wght@200;300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant+Garamond", Georgia, serif;
+  
+  --color-brand-primary: #FCFAF7; /* Professional Polish Background */
+  --color-brand-accent: #BFA18A;  /* Professional Polish Gold */
+  --color-brand-nude: #EBDCD1;    /* Professional Polish Nude */
+  --color-brand-ink: #2D2926;    /* Professional Polish Text */
+  --color-brand-gray: #6B6560;   /* Professional Polish Light Text */
+  --color-brand-white: #FFFFFF;
+  --color-brand-gold: #D4AF37;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-primary text-brand-ink font-sans antialiased scroll-smooth;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.premium-blur {
+  backdrop-filter: blur(12px);
+  background-color: rgba(252, 250, 247, 0.85); /* Slightly Adjusted for new BG */
+}
+
+.oval-image {
+  border-radius: 50% 50% 0 0;
+}
+
+.line-drawing {
+  @apply border-brand-nude;
+}
+
+.card-polish {
+  @apply bg-white rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.03)] border border-brand-nude/20;
+}
+
+.nav-link-polish {
+  @apply text-[11px] uppercase tracking-[1.5px] text-brand-gray hover:text-brand-ink transition-colors;
+}
+
+.btn-primary-polish {
+  @apply bg-brand-ink text-white rounded py-4 px-8 text-[13px] uppercase tracking-wider transition-all hover:bg-black;
+}
+
+.btn-secondary-polish {
+  @apply border border-brand-nude text-brand-ink rounded py-4 px-8 text-[13px] uppercase tracking-wider transition-all hover:bg-brand-nude/20;
+}
